@@ -1,5 +1,5 @@
 # Anime Hub
-
+- **DEMO** []
 A simple and modern web application for searching and discovering anime using the Anime DB API from RapidAPI.
 
 ## Author Information
