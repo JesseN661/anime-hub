@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Hub - Search & Discover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anime Hub</h1>
+            <button id="settingsBtn" class="settings-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6m-9-9h6m6 0h6m-2.636-6.364l-4.243 4.243m0 4.242l4.243 4.243m-12.728 0l4.243-4.243m0-4.242L2.636 2.636"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>API Settings</h2>
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <label for="apiKeyInput">RapidAPI Key:</label>
+                    <input type="password" id="apiKeyInput" placeholder="Enter your RapidAPI key">
+                    <button id="saveApiKey" class="btn-primary">Save API Key</button>
+                    <p class="info-text">Your API key is stored locally in your browser and never shared.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search anime by title..." class="search-input">
+                <button id="searchBtn" class="btn-search">Search</button>
+            </div>
+
+            <div class="filters">
+                <select id="genreFilter" class="filter-select">
+                    <option value="">All Genres</option>
+                </select>
+                <select id="sortBy" class="filter-select">
+                    <option value="ranking">Sort by Ranking</option>
+                    <option value="title">Sort by Title</option>
+                </select>
+                <select id="sortOrder" class="filter-select">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading anime data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Results Section -->
+        <div id="results" class="results-grid"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination hidden">
+            <button id="prevPage" class="btn-page">Previous</button>
+            <span id="pageInfo" class="page-info">Page 1</span>
+            <button id="nextPage" class="btn-page">Next</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Jesse Nkubito | Powered by Anime DB API</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
