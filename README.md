@@ -1,6 +1,6 @@
 # Anime Hub
 
-- **DEMO** [Youtube]
+- **DEMO** [[Youtube]](https://youtu.be/opN9ZJnMl5Y)
 
 A simple and modern web application for searching and discovering anime using the Anime DB API from RapidAPI.
 
